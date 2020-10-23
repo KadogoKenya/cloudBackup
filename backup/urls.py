@@ -40,7 +40,9 @@ urlpatterns = [
     url('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     url('display_profile/', user_views.display_profile, name='display_profile'),
 
-    url(r'^accounts/', include('registration.backends.simple.urls')),
+    # url(r'^accounts/', include('registration.backends.simple.urls')),
+    # url(r'^logout/$', views.logout, {"next_page": '/'}), 
+
 
 ]
 if settings.DEBUG:
