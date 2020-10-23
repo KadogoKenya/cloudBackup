@@ -39,6 +39,9 @@ urlpatterns = [
     url('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     url('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     url('display_profile/', user_views.display_profile, name='display_profile'),
+
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
