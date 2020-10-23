@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cloudbackup.apps.CloudbackupConfig',
+    'users.apps.UsersConfig',
+    'bootstrap3',
+    'registration',
 
 
 ]
